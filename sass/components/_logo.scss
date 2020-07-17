@@ -1,0 +1,13 @@
+//Logo
+
+.logo {
+  // .logo__link
+  &__link {
+    @include fontProperty($family: Raleway, $size: 26px, $weight: 700, $lh: 1.2);
+  }
+
+  // .logo__link--accent
+  &__link--accent {
+    color: $colorAccent;
+  }
+}

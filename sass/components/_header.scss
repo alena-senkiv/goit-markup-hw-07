@@ -1,0 +1,107 @@
+//Header
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: inherit;
+
+  // .header--border
+  &--border {
+    border: 1px solid #ececec;
+  }
+
+  // .header__box
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__menu
+  &__menu {
+    flex-grow: 1;
+    margin-left: 85px;
+  }
+
+  // .header__adress
+  &__adress {
+    @extend .header__box;
+  }
+}
+
+.menu {
+  // .menu__list
+  &__list {
+    @extend .header__box;
+  }
+
+  // .menu__list-item
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  // .menu__link
+  &__link {
+    position: relative;
+    @extend %linkNavProperty;
+    @extend %transitionColor;
+
+    // .menu__link:focus, .menu__link:hover
+    &:focus,
+    &:hover {
+      color: $colorAccent;
+
+      // .menu__link:focus::after, .menu__link:hover::after
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    // .menu__link::after
+    &::after {
+      @extend %linkAfter;
+      transform: scaleX(0);
+      transition: transform $timing;
+    }
+  }
+
+  // .menu__link--active
+  &__link--active {
+    color: $colorAccent;
+
+    // .menu__link--active:after
+    &::after {
+      @extend %linkAfter;
+      transform: scaleX(1);
+    }
+  }
+}
+
+// .adress
+.adress {
+  // .adress__item
+  &__item {
+    // .adress__item:first-child
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+
+  // .adress__link
+  &__link {
+    @extend %linkNavProperty;
+
+    color: $secondaryColor;
+    @extend %transitionColor;
+
+    // .adress__link:focus, .adress__link:hover
+    &:focus,
+    &:hover {
+      color: $colorAccent;
+    }
+  }
+}

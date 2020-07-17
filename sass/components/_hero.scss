@@ -1,0 +1,34 @@
+/* Hero */
+
+//.hero
+.hero {
+  position: relative;
+  max-width: 1600px;
+  height: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  background-color: $bgOpacityColor;
+  background-image: linear-gradient($bgOpacityColor, $bgOpacityColor), url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  //.hero__content
+  &__content {
+    @extend %positionCenter;
+  }
+
+  //.hero__title
+  &__title {
+    width: 696px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    color: $primaryWhiteColor;
+    @include fontProperty($size: 44px, $weight: 900, $lh: 1.4, $letter: 0.06em);
+  }
+}

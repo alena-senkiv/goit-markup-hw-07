@@ -1,0 +1,23 @@
+@mixin flexProperty($type: inline-flex, $horisontal: center, $vertical: center) {
+  display: $type;
+  justify-content: $horisontal;
+  align-items: $vertical;
+}
+
+@mixin fontProperty($family: false, $size: false, $weight: false, $lh: false, $letter: false) {
+  @if $family {
+    font-family: $family;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $letter {
+    letter-spacing: $letter;
+  }
+}
