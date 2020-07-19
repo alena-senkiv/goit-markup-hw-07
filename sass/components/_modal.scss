@@ -50,6 +50,7 @@
     cursor: pointer;
     transition: transform $timing, color $timing;
 
+    // .modal__close:focus, .modal__close:hover
     &:focus,
     &:hover {
       color: $colorAccent;

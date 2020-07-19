@@ -50,13 +50,13 @@
 
     transform: translateY(100%);
     transition: transform $timing;
+  }
 
-    // .project__link:focus .project__overlay-text,
-    // .project__link:hover .project__overlay-text
-    .project__link:focus &,
-    .project__link:hover & {
-      transform: translateY(0);
-    }
+  // .project__link:focus .project__overlay-text,
+  // .project__link:hover .project__overlay-text
+  &__link:focus &__overlay-text,
+  &__link:hover &__overlay-text {
+    transform: translateY(0);
   }
 
   // .project__content
